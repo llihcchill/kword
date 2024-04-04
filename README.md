@@ -3,7 +3,7 @@ Webscraper that scrapes all text from a website and organises it into its keywor
 
 # Installation
 All you need to do is install the python script using the git command below:  
-`git clone https://github.com/llihcchill/kword/kword.py`
+`git clone https://github.com/llihcchill/kword`
 
 # Usage
 There are three arguments for this script (not including help), of which the main one is to of course scrape a URL and return a list of keywords:  
