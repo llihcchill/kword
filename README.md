@@ -2,7 +2,7 @@
 Webscraper that scrapes all text from a website and organises it into its keywords for an API fuzzing list.
 
 # Installation
-All you need to do is install the python script using the git command below:
+All you need to do is install the python script using the git command below:  
 `git clone https://github.com/llihcchill/kword/kword.py`
 
 # Usage
