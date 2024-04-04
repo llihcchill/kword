@@ -16,6 +16,6 @@ The list can be appended to an output file using the -o flag:
 
 ---
 
-At a moments notice, you can use the -r flag to request an AI chatbot to provide a list of related words. You can request as many words as need be by adding them together with commas:
-(*note that putting the words together with commas is very important*)
+At a moments notice, you can use the -r flag to request an AI chatbot to provide a list of related words. You can request as many words as need be by adding them together with commas:  
+(*note that putting the words together with commas is very important*)  
 `python kword.py -r test,lab,experiment`
