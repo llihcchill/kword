@@ -50,8 +50,13 @@ def ai_api_request():
 
     return completion.choices[0].message
 
+def create_output_file(write_to_file):
+    with open(str(sys.argv[o_index + 1]), "w") as file:
+        file.write(write_to_file)
+        print("List successfully created!")
 
-help = "KWORD HELP \n \n ======== \n \n -u: URL to be webscraped \n -ai: Keyword to be expanded upon via an AI API \n -o: Makes an output to a file \n \n Example usage: python kword.py -u <host url> -o list.txt"
+
+help = "KWORD HELP \n \n ======== \n \n -u: URL to be webscraped \n -r: Keyword to be expanded upon via the ChatGPT API \n -o: Makes an output to a file \n \n Example usage: python kword.py -u <host url> -o list.txt"
 
 for i in range(1, len(sys.argv)):
 
@@ -75,22 +80,22 @@ def run():
         print(help)
         return
 
-    if related == True and h != True:
-        if len(sys.argv) > 3:
+    if related == True:
+        if len(sys.argv) > 5:
             print("For the AI API request, please combine all words together: -r test,lab,experiment")
             return
 
-        print(ai_api_request())
-        return
-        
+        if output != True:
+            print(ai_api_request())
+            return
 
+        create_output_file(ai_api_request())
+        return
     
-    if output != True and related != True and h != True:
+    if output != True and related != True:
         print(webscrape_filter())
         return
 
-    with open(str(sys.argv[o_index + 1]), "w") as file:
-        file.write(webscrape_filter())
-        print("List successfully created!")
+    create_output_file(webscrape_filter())
 
 run()
