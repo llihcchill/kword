@@ -3,16 +3,19 @@ Webscraper that scrapes all text from a website and organises it into its keywor
 
 # Installation
 All you need to do is install the python script using the git command below:  
-`git clone https://github.com/llihcchill/kword`
-
+`git clone https://github.com/llihcchill/kword`  
+  
+If you plan to use the related words function (-r), you will need to have credits on your ChatGPT account and will need to make an API key [here](https://platform.openai.com/api-keys).
+Then you will need to edit the kword.py script and replace "your api key" with your generated one:
+  
 # Usage
 There are three arguments for this script (not including help), of which the main one is to of course scrape a URL and return a list of keywords:  
-`python kword.py -u https://<url>`
+`python kword.py -u https://<url>`  
 
 ---
 
 The list can be appended to an output file using the -o flag:  
-`python kword.py -u https://<url> -o output.txt`
+`python kword.py -u https://<url> -o output.txt`  
 
 ---
 
